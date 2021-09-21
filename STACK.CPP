@@ -13,7 +13,7 @@ void update();
 
 int main(){
 	int n,op;
-	printf("\nEnter size of your own stack -> ");
+	printf("\nEnter size of your own stack this is master in-> ");
 	scanf("%d",&n);
 	stack = (int*)calloc(n, sizeof(int));
 	 while(1){
