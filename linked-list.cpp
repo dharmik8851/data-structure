@@ -3,6 +3,8 @@
 using namespace std;
 void createList();
 void showList();
+
+//this is the structure of each node in a list
 struct list{
 	int data;
 	struct list *next;
