@@ -48,6 +48,7 @@ void createList(){
 	return;
 }
 
+//showing all elements of list
 void showList(){
 	node=start;
 	if(node==NULL){
