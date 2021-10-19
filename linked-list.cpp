@@ -1,19 +1,23 @@
 #include<stdio.h>
 #include<iostream>
 using namespace std;
+
+//this is the class of each node in a list
+class list{
+	public:
+	int data;
+	list *next;
+};
+
 void createList();
 void showList();
 void insertAt(int no);
-struct list* ptrAt(int pos);
-struct list* search(int ele);
+list* ptrAt(int pos);
+list* search(int ele);
 
-//this is the structure of each node in a list
-struct list{
-	int data;
-	struct list *next;
-};
 
-struct list *node,*start,*endptr;
+
+list *node,*start,*endptr;
 
 int main(){
 	
@@ -39,12 +43,12 @@ int main(){
 void createList(){
 	char ch='y';
     while(ch=='y' || ch=='Y'){
-    	if(node == NULL){node = new struct list;//(struct list*)malloc(sizeof(struct list));
+    	if(node == NULL){node = new list;//(struct list*)malloc(sizeof(struct list));
     		start = node;
 			printf("Enter Element -> ");
     		cin>>node->data;goto here;
 		}
-    	node->next=new struct list;//(struct list*)malloc(sizeof(struct list));
+    	node->next=new list;//(struct list*)malloc(sizeof(struct list));
     	node=node->next;
     	printf("Enter Element -> ");
     	cin>>node->data;
@@ -75,7 +79,7 @@ void showList(){
 void insertAt(int no){
 	if(start==NULL) {
 	cout<<"Please first create list...";return;}
-	struct list *temp = new struct list;//(struct list*)malloc(sizeof(struct list));
+	list *temp = new list;//(struct list*)malloc(sizeof(struct list));
 	switch(no){
 		case 2:
 			temp->next=start;
@@ -127,7 +131,7 @@ void insertAt(int no){
 }
 
 //this function will search the element and return address of that element
-struct list* search(int ele){
+list* search(int ele){
 	node=start;
 	while(node!=NULL){
 		if(node->data==ele){
@@ -140,7 +144,7 @@ struct list* search(int ele){
 }
 
 //return address of position
-struct list* ptrAt(int pos)
+list* ptrAt(int pos)
 {   int ct=0;
     node=start;
     while(node!=NULL)
