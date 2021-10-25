@@ -1,3 +1,3 @@
 # data-structure
-learning about data structure in c and c++
-currently i am imlementing diffrent types data structure in c/c++
+learning about data structure in c++
+currently i am implementing diffrent types data structure in c++
