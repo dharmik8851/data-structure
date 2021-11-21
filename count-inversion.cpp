@@ -26,7 +26,7 @@ int merge(int arr[], int l, int mid, int r){
 		}
 		else{
 			arr[k] = b[j];
-			inv++;
+			inv+=n1-i;
 			k++; j++;
 		}
 	}
@@ -58,7 +58,7 @@ int mergeSort(int arr[], int l, int r){
 }
 
 int main(){
-	int arr[] = {6,3,9,5,2,8,7,1};
+	int arr[] = {3,5,6,9,1,2,7,8};
 	cout<<endl<<"before sorting -> ";
 	for(auto val : arr){
 		cout<<val<<" ";
