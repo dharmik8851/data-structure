@@ -30,7 +30,7 @@ int trapping_rain(vector<int> arr){
 }
 
 int main(){
-	vector<int> arr = {0,1,0,2,1,0,1,3,2,1,2,1,0};	
+	vector<int> arr = {9,1,8,6,2,5,4,8,3,7};	
 	cout<<trapping_rain(arr);
 	return 0;
 }

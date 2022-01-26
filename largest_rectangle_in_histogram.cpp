@@ -31,7 +31,7 @@ int get_max_rectangle(vector<int> arr){
 }
 
 int main(){
-	vector<int> arr= {1,2,3,2,1};
+	vector<int> arr= {9,1,8,6,2,5,4,8,3,7};
 	cout<<get_max_rectangle(arr);
 	return 0;
 }
