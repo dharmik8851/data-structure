@@ -32,15 +32,17 @@ vector<Node*> constructTrees(int start,int end){
 	}
 
 	for(int i=start; i<=end; i++){
-		vector<Node*> leftSubtrees = constructTrees(start,i-1);
-		vector<Node*> rightSubtrees = constructTrees(i+1,end);
+		//e.g i=2;
+		vector<Node*> leftSubtrees = constructTrees(start, i-1);//start=1, end=1
+		vector<Node*> rightSubtrees = constructTrees(i+1,end);//start=3, end=3
+
 		for(int j=0; j<leftSubtrees.size(); j++){
 			Node* left = leftSubtrees[j];
 			for(int k=0; k<rightSubtrees.size(); k++){
 				Node* right = rightSubtrees[k];
 				Node* node = new Node(i);
 				node->left = left;
-				node->right = right;
+				node->right = right; 
 				trees.push_back(node);
 			}
 		}

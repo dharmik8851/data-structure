@@ -25,6 +25,7 @@ void flatten(node* root){
 		root->right = root->left;
 		root->left = NULL;
 		node* t = root->right;
+
 		while(t->right!=NULL){
 			t=t->right;
 		}
@@ -46,7 +47,11 @@ int main(){
 	root->right = new node(3);
 	root->right->left = new node(4);
 	root->right->right = new node(5);
-	
+	/*
+			1
+		2		3
+			   4 5
+	*/
 	
 	flatten(root);
 	inorderprint(root);

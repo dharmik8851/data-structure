@@ -67,6 +67,6 @@ int main(){
 	root->left->left = new node(4);
 	root->right->right = new node(5);
 	
-	cout<<distBtnNodes(root,2,1);
+	cout<<distBtnNodes(root,4,5);
 	return 0;
 }
