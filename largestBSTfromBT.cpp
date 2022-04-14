@@ -50,11 +50,11 @@ int main(){
 	/*
 			5
 		3		6
-	  2   4       1
+	  2   4       3
 	*/
 	Node* root = new Node(5);
 	root->right = new Node(6);
-	root->right->right = new Node(1);
+	root->right->right = new Node(3);
 	root->left = new Node(3);
 	root->left->left = new Node(2);
 	root->left->right = new Node(4);
