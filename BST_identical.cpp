@@ -27,7 +27,7 @@ int main(){
 	root->right = new Node(2);
 	root->left = new Node(3);
 
-	Node* root1 = new Node(5);
+	Node* root1 = new Node(1);
 	root1->right = new Node(2);
 	root1->left = new Node(3);	
 	
